@@ -51,7 +51,7 @@ function twitter_messages($username = '', $num = 1, $list = false, $update = tru
 	global $twitter_options;
 	include_once(ABSPATH . WPINC . '/rss.php');
 	
-	$messages = fetch_rss('http://twitter.com/statuses/user_timeline/'.$username.'.rss');
+        $messages = fetch_rss('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name='.$username);
 
 	if ($list) echo '<ul class="twitter">';
 	
